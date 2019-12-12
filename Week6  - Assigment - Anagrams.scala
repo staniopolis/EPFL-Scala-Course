@@ -189,7 +189,7 @@ object Anagrams extends AnagramsInterface {
         for {
           word <- currentDic
           rest <- combLoop(subtract(sentenceByOcc, wordOccurrences(word)),
-            newDic(subtract(sentenceByOcc, wordOccurrences(word)), newDicByOcc), commonDic.take(1))
+            newDic(subtract(sentenceByOcc, wordOccurrences(word)), newDicByOcc), commonDic)
         } yield word :: rest
       }
 
